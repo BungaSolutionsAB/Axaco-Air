@@ -1,0 +1,54 @@
+
+/**
+ * Media Queries
+ */
+
+// Breakpoints
+$S: 640px;
+$M: 768px;
+$L: 1024px;
+$XL: 1440px;
+
+/**
+ * MQ
+ * @param {string} $canvas can be S, M, L or XL
+ */
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+	@else if $canvas == XL {
+	 @media only screen and (min-width: $XL) { @content; }
+	}
+}
+
+/**
+ * Center Mixin
+ * @param  {string} xy 	can be either x, y or both.
+ * @return {css}        returns css for centering
+ */
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
