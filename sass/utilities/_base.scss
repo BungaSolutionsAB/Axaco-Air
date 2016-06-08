@@ -3,7 +3,7 @@
 
 	@include MQ(SM) {
 		position: static;
-		height: auto;
+		height: auto !important;
 		width: 100%;
 		min-width: 357px;
 		max-width: 100%;
