@@ -14,18 +14,28 @@ $XL: 1440px;
  * @param {string} $canvas can be S, M, L or XL
  */
 @mixin MQ($canvas) {
-  @if $canvas == S {
+
+	// Notice! - SM is max width and not min width
+	@if $canvas == SM {
+	 @media only screen and (max-width: $S) { @content; }
+	}
+
+  @else if $canvas == S {
    @media only screen and (min-width: $S) { @content; }
   }
+
   @else if $canvas == M {
    @media only screen and (min-width: $M) { @content; }
-  }
-  @else if $canvas == L {
+	}
+
+	@else if $canvas == L {
    @media only screen and (min-width: $L) { @content; }
   }
+
 	@else if $canvas == XL {
 	 @media only screen and (min-width: $XL) { @content; }
 	}
+
 }
 
 /**

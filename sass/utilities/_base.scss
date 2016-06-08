@@ -1,0 +1,12 @@
+// The container of the form
+.PublicPage .FormBody {
+
+	@include MQ(SM) {
+		position: static;
+		height: auto;
+		width: 100%;
+		min-width: 357px;
+		max-width: 100%;
+	}
+
+}
