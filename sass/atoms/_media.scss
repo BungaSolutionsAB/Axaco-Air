@@ -1,7 +1,9 @@
+
+
 .PoweredBy {
 
 	@include MQ(SM) {
-		position: static;
+		position: static !important;
 	}
 
 }

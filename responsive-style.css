@@ -1,3 +1,1 @@
-.clearfix:after{content:"";display:table;clear:both}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWxpdGllcy9fY2xlYXJmaXguc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFFSSxXQUNBLGNBQ0EsVUFBWSxDQUNiIiwiZmlsZSI6InJlc3BvbnNpdmUtc3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNsZWFyZml4IHtcbiAgJjphZnRlciB7XG4gICAgY29udGVudDogXCJcIjtcbiAgICBkaXNwbGF5OiB0YWJsZTtcbiAgICBjbGVhcjogYm90aDtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */
+.clearfix:after{content:"";display:table;clear:both}@media only screen and (max-width: 640px){.PublicPage .FormBody{position:static;height:auto;width:100%;min-width:357px;max-width:100%}}.control-label{padding:0 15px;word-break:break-word}@media only screen and (max-width: 640px){.PoweredBy{position:static !important}}@media only screen and (max-width: 640px){.form-horizontal .control-label{padding-left:15px;padding-right:15px}}.OverlayEditor{min-width:327px;width:100%;max-width:100%}

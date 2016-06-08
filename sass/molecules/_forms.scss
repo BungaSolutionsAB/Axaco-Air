@@ -1,0 +1,9 @@
+// Overrule padding from another file
+.form-horizontal .control-label {
+
+	@include MQ(SM) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+}
