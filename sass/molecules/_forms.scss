@@ -7,3 +7,9 @@
 	}
 
 }
+
+.PageLayer .ContextWindowBox {
+	min-height: 500px;
+	overflow: auto;
+	overflow-y: scroll;
+}
