@@ -2,6 +2,8 @@
 
 .PoweredBy {
 
+	z-index: 10;
+
 	@include MQ(SM) {
 		position: static !important;
 	}

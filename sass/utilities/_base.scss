@@ -1,6 +1,8 @@
 // The container of the form
 .PublicPage .FormBody {
 
+	z-index: 20;
+
 	@include MQ(SM) {
 		position: static;
 		height: auto !important;
