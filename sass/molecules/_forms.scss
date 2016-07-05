@@ -1,11 +1,18 @@
 // Overrule padding from another file
 .form-horizontal .control-label {
 
+	margin-left: 0;
+	margin-right: 0;
+
 	@include MQ(SM) {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 
+}
+
+.PageLayer {
+	overflow: auto;
 }
 
 .PageLayer .ContextWindowBox {
