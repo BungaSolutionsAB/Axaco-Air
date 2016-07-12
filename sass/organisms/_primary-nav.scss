@@ -1,0 +1,200 @@
+.PrimaryNavigator {
+  padding: 0;
+  height: 48px;
+  background-color: #52729e;
+  background-image: none;
+  color: #fff;
+	overflow: hidden;
+}
+
+
+// User control
+
+.UserControlContainer {
+  background: #52729e;
+  z-index: 10;
+  height: 48px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.UserControlBody .Section .Content {
+  line-height: 48px;
+}
+
+.UserControlBody .Section .Icon {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .PrimaryNavigator {
+    height: 58px;
+  }
+  .UserControlContainer {
+    height: 58px;
+  }
+  .UserControlBody .Section .Content {
+    line-height: 58px;
+  }
+  .UserControlBody .Section .Icon {
+    display: inline-block;
+  }
+}
+
+
+.PrimaryNavigator .Breadcrumb ul {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.PrimaryNavigator .Breadcrumb:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.PrimaryNavigator .Breadcrumb ul li {
+  display: none;
+  float: left;
+  margin: 0;
+}
+
+.PrimaryNavigator .Breadcrumb ul li:after {
+  // this is the separator between items
+  display: inline-block;
+  content: '\00bb';
+  margin: 0 .6em;
+  color: #fff;
+}
+
+.PrimaryNavigator .Breadcrumb ul li:first-of-type,
+.PrimaryNavigator .Breadcrumb ul li.Previous,
+.PrimaryNavigator .Breadcrumb ul li.Active {
+  display: inline-block;
+}
+
+.PrimaryNavigator .Breadcrumb ul li:first-of-type > * {
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.PrimaryNavigator .Breadcrumb ul li:last-of-type:after {
+  // hide separator after the last item
+  display: none;
+}
+
+.PrimaryNavigator .Breadcrumb ul li > * {
+  // single step
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 14px 0 8px;
+}
+
+.PrimaryNavigator .Breadcrumb ul li.Active > * {
+  // selected step
+  text-decoration: underline;
+}
+
+.PrimaryNavigator .Breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .PrimaryNavigator .Breadcrumb {
+    padding: 0;
+  }
+  .PrimaryNavigator .Breadcrumb ul li {
+    margin: 0 4px 0 0;
+    display: inline-block;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:after {
+    margin: 0 1em;
+  }
+  .PrimaryNavigator .Breadcrumb ul li > * {
+    font-size: 1.6rem;
+  }
+}
+
+
+// Triangle Styles on Larger screens
+
+@media only screen and (min-width: 768px) {
+  .PrimaryNavigator .Breadcrumb ul {
+    // reset basic style
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  .PrimaryNavigator .Breadcrumb ul li {
+    position: relative;
+    padding: 0;
+    margin: 0 4px 0 0;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:last-of-type {
+    margin-right: 0;
+  }
+  .PrimaryNavigator .Breadcrumb ul li > * {
+    position: relative;
+    padding: 18px 8px 18px 39px;
+    color: #fff;
+    background-color: #52729e;
+    // the border color is used to style its :after pseudo-element
+    border-color: #52729e;
+  }
+  .PrimaryNavigator .Breadcrumb ul li.Active > * {
+    // selected step
+    color: #ffffff;
+    background-color: #466186;
+    border-color: #466186;
+    text-decoration: none;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:first-of-type > * {
+    padding: 13px 16px;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:last-of-type > * {
+    padding-right: 16px;
+  }
+  .no-touch .PrimaryNavigator .Breadcrumb ul a:hover {
+    // steps already visited
+    color: #fff;
+    background-color: #466186;
+    border-color: #466186;
+    text-decoration: none;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:after, .PrimaryNavigator .Breadcrumb ul li > *::after {
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: 100%;
+		height: 0;
+		width: 0;
+		border: 34px solid transparent;
+		border-right-width: 0;
+		border-left-width: 27px;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:after {
+    // this is the white separator between two items
+    z-index: 1;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+    border-left-color: #ffffff;
+    // reset style
+    margin: 0;
+  }
+  .PrimaryNavigator .Breadcrumb ul li > *::after {
+    // this is the colored triangle after each element
+    z-index: 2;
+    border-left-color: inherit;
+  }
+  .PrimaryNavigator .Breadcrumb ul li:last-of-type:after, .PrimaryNavigator .Breadcrumb ul li:last-of-type > *::after {
+    // hide the triangle after the last step
+    display: none;
+  }
+  @-moz-document url-prefix() {
+    .PrimaryNavigator .Breadcrumb ul li:after, .PrimaryNavigator .Breadcrumb ul li > *::after {
+      // fix a bug on Firefix - tooth edge on css triangle
+      border-left-style: dashed;
+    }
+  }
+}

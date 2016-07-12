@@ -12,11 +12,13 @@
 @import 'atoms/lists';
 @import 'atoms/media';
 @import 'atoms/notices';
+@import 'atoms/breadcrumb';
 
 // Molecules
 @import 'molecules/forms';
 
 // Organisms
+@import 'organisms/primary-nav';
 @import 'organisms/date-picker';
 @import 'organisms/language-bar';
 @import 'organisms/WYSIWYG';
